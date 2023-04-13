@@ -29,8 +29,7 @@ export const HabitsList: FC<HabitsListProps> = ({
 
     if (isHabitAlreadyCompleted)
       completedHabits = habitsInfo?.completedHabits.filter((id) => id !== habitId);
-    // eslint-disable-next-line no-unsafe-optional-chaining
-    else completedHabits = [...habitsInfo?.completedHabits, habitId];
+    else completedHabits = [...habitsInfo.completedHabits, habitId];
 
     const updatedCompletedPercentage = calculateCompletedPercentage(
       habitsInfo?.possibleHabits.length,

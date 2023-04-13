@@ -51,11 +51,13 @@ export const HabitModal: FC<HabitModalProps> = ({
       });
   }, [date, handleCompletedPercentage]);
 
-  // eslint-disable-next-line @typescript-eslint/explicit-function-return-type, @typescript-eslint/no-shadow
-  const handleCompletedChanged = (habitsInfo: HabitsInfo, completedHabits: string[]) => {
+  const handleCompletedChanged = (
+    habitsInformation: HabitsInfo,
+    completedHabits: string[]
+  ): void => {
     setHabitsInfo({
       completedHabits,
-      possibleHabits: habitsInfo?.possibleHabits
+      possibleHabits: habitsInformation?.possibleHabits
     });
   };
 
